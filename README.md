@@ -54,3 +54,4 @@ Our application is designed for:
    ```bash
    git clone https://github.com/your-repo/ai-resume-review.git
    cd ai-resume-review
+   npm install 
