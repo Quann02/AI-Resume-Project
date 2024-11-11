@@ -1,70 +1,56 @@
-# Getting Started with Create React App
+# AI Resume Review Project - INFO 441 Group 4
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Project Overview
+The AI Resume Review application is an intelligent tool designed to assist job seekers in tailoring and refining their resumes for specific job applications. By leveraging AI-powered features, the project aims to streamline the resume customization process, helping users enhance their chances of securing desired roles with tailored, professional-quality resumes.
 
-## Available Scripts
+## Project Goals
+- **Customization**: Deliver job-specific resume suggestions based on the analysis of job postings, ensuring that relevant skills and experiences are highlighted effectively.
+- **Time Efficiency**: Automate the resume customization process, reducing manual edits and saving users valuable time.
+- **Professional Quality**: Enhance resume presentation and structure using industry-standard formats, such as Google’s XYZ method.
 
-In the project directory, you can run:
+## Target Audience
+Our application is designed for:
+- **Recent Graduates**: Customizing resumes for entry-level job applications.
+- **College Students**: Applying for internships or co-op programs.
+- **Career Changers**: Transitioning between industries and needing to emphasize relevant skills.
+- **Young Professionals**: Seeking promotions or exploring new career opportunities.
 
-### `npm start`
+## Key Features
+1. **Job Posting Analysis**: Users can upload a job posting or provide a URL for analysis. The backend extracts key job requirements using web scraping.
+2. **AI-Powered Resume Customization**: Utilizes AI (via GPT API) to format and tailor the user’s resume based on the analyzed job posting requirements.
+3. **Downloadable Resumes**: Users can export their customized resumes in PDF or DOCX format.
+4. **Resume History**: Users can access and manage their previously generated resumes for future job applications.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## User Stories
+- **Login and Authentication**: Users can create accounts, log in, and securely manage their profiles.
+- **Job Posting Input**: Users can upload a job posting or provide a URL to initiate the analysis process.
+- **AI Resume Generation**: The application generates a customized resume based on the job requirements and user-provided information.
+- **Resume Export**: Users can download their customized resumes in PDF or DOCX format.
+- **Access Previous Resumes**: Users can view and manage their resume history for easy access and reuse.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Technical Implementation
+- **Frontend**: Built with HTML, CSS, and JavaScript for a responsive user interface.
+- **Backend**: Developed using Node.js and Express for server-side logic and API handling.
+- **Database**: Utilizes MongoDB for storing user data, job postings, and resume history.
+- **AI Integration**: Uses GPT API for natural language processing and resume formatting.
+- **Authentication**: Supports MongoDB-based or Azure-based authentication for secure user sessions.
 
-### `npm test`
+## API Endpoints
+| Endpoint                 | Description                                              |
+|--------------------------|----------------------------------------------------------|
+| **GET /user/login**      | User login functionality.                                |
+| **POST /user/register**  | User registration for creating new accounts.             |
+| **GET /resume/:id**      | Retrieves a specific generated resume.                   |
+| **POST /resume**         | Uploads and saves a newly generated resume to history.   |
+| **GET /resume/download/:id** | Exports and downloads the specified resume as a PDF or DOCX file. |
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Future Enhancements
+- **Resume Feedback**: Integrate AI-generated feedback to help users improve their resume content.
+- **LinkedIn Integration**: Allow users to import their LinkedIn profile data for quicker and easier resume building.
+- **Job Matching**: Suggest relevant job openings based on the user’s resume content, enhancing job search efficiency.
 
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## Installation and Setup
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/your-repo/ai-resume-review.git
+   cd ai-resume-review
